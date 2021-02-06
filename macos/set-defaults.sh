@@ -11,7 +11,7 @@
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Use AirDrop over every interface. srsly this should be a default.
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+# defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
@@ -34,8 +34,18 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 # Set up Safari for development.
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# defaults write com.apple.Safari IncludeDevelopMenu -bool true
+# defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+# defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+# defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Switch keys to make sense... - `~ belong next to 1 and \| belong next to Z
+hidutil property --set '{"UserKeyMapping":[
+{
+	"HIDKeyboardModifierMappingSrc":0x700000035,
+	"HIDKeyboardModifierMappingDst":0x700000031
+},{
+	"HIDKeyboardModifierMappingSrc":0x700000064,
+	"HIDKeyboardModifierMappingDst":0x700000035
+}]}'
