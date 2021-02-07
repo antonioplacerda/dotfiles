@@ -53,3 +53,6 @@ brew update
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install
+
+# Install starship
+curl -fsSL https://starship.rs/install.sh | bash
