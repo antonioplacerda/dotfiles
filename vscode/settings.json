@@ -1,0 +1,49 @@
+{
+    "extensions.ignoreRecommendations": true,
+    "git.confirmSync": false,
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "git.enableSmartCommit": true,
+    "files.exclude": {
+        "**/.git/config": false,
+        "{.git/hooks,.git/info,.git/logs,.git/objects,.git/refs,.git/HEAD,.git/index,.git/packed-refs,.git/COMMIT_EDITMSG,.git/FETCH_HEAD,.git/ORIG_HEAD}": true,
+        "**/__pycache__": true,
+        "**/.git": false,
+    },
+    "editor.scrollBeyondLastLine": false,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "git-commit",
+        "latex",
+        "markdown",
+        "plaintext"
+    ],
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "team.showWelcomeMessage": false,
+    "files.associations": {
+    
+    },
+    "team.showFarewellMessage": false,
+    "python.showStartPage": false,
+    "editor.codeActionsOnSave": null,
+    "workbench.editorAssociations": [],
+    "[javascript]": {
+    "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "python.pythonPath": "/usr/local/opt/python@3.9/bin/python3",
+    "window.zoomLevel": 0,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile"
+}
