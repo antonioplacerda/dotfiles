@@ -49,3 +49,10 @@ hidutil property --set '{"UserKeyMapping":[
 	"HIDKeyboardModifierMappingSrc":0x700000064,
 	"HIDKeyboardModifierMappingDst":0x700000035
 }]}'
+
+mkdir -p ~/Library/KeyBindings
+echo '{
+  "^@\UF701" = "noop";
+  "^@\UF702" = "noop";
+  "^@\UF703" = "noop";
+}' > ~/Library/KeyBindings/DefaultKeyBinding.dict
