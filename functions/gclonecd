@@ -5,5 +5,5 @@
 gclonecd() {
   git_dir="$(basename "$1" .git)"
   git_dir_resolved=${2:-$git_dir}
-  git clone "$@" && cd "$git_dir_resolved";
+  git clone "$@" && cd "$git_dir_resolved" && e .;
 }
