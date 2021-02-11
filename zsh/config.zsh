@@ -1,4 +1,5 @@
-export LSCOLORS="exfxcxdxbxegedabagacad"
+export LSCOLORS="bafxcxdxbxegedabagacad" 
+# alias ls='ls -lGH'
 export CLICOLOR=true
 
 fpath=($ZSH/functions $fpath)
