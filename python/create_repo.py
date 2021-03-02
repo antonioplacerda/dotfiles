@@ -14,7 +14,6 @@ def create_repo(repo_name):
     data = {
         "name": repo_name,
         "auto_init": True,
-
     }
     res = requests.post(NEW_REPO_URL, auth=auth, data=json.dumps(data))
 
@@ -32,5 +31,5 @@ if __name__ == "__main__":
 
     pipe = subprocess.Popen("git clone " + url, shell=True, cwd=projects_path)
     pipe.wait()
-    
+
     print(projects_path + "/" + repo_name)
