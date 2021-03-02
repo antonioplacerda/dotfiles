@@ -1,0 +1,16 @@
+repo = ARGV[0]
+
+`curl \
+  -X POST \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/user/repos \
+  -d '{"name":repo,"auto_init":"true","has_projects":"false","has_wiki":"false"}'`
+
+
+  output = `curl -i https://git.io -F 'url=#{url}' #{code} 2> /dev/null`
+if output =~ /Location: (.+)\n?/
+  puts $1
+  `echo #$1 | pbcopy`
+else
+  puts output
+end
