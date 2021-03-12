@@ -19,8 +19,7 @@ then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
   fi
 
+  source "${DOTFILES}/homebrew/apps.sh"
 fi
-
-source "${DOTFILES}/homebrew/apps.sh"
 
 exit 0
