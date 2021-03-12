@@ -14,3 +14,7 @@ brew install fzf
 brew install vim
 brew install python
 brew install git
+brew install zsh-completions
+brew install zsh-autosuggestions
+brew install zsh-history-substring-search
+brew install zsh-syntax-highlighting
