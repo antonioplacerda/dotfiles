@@ -21,4 +21,6 @@ then
 
 fi
 
+source "${DOTFILES}/homebrew/apps.sh"
+
 exit 0
