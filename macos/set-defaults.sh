@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Sets reasonable macOS defaults.
 #
 # Or, in other words, set shit how I like in macOS.
@@ -32,14 +33,18 @@ defaults write com.apple.Finder AppleShowAllFiles true
 killall Finder
 
 # Switch keys to make sense... - `~ belong next to 1 and \| belong next to Z
-hidutil property --set '{"UserKeyMapping":[
-{
-	"HIDKeyboardModifierMappingSrc":0x700000035,
-	"HIDKeyboardModifierMappingDst":0x700000031
-},{
-	"HIDKeyboardModifierMappingSrc":0x700000064,
-	"HIDKeyboardModifierMappingDst":0x700000035
-}]}'
+read -p "Remap keys (only valid for PT/UK keyboards) [y/N]: " remap
+if [[ "$remap" == "y" ]]
+then
+	hidutil property --set '{"UserKeyMapping":[
+	{
+		"HIDKeyboardModifierMappingSrc":0x700000035,
+		"HIDKeyboardModifierMappingDst":0x700000031
+	},{
+		"HIDKeyboardModifierMappingSrc":0x700000064,
+		"HIDKeyboardModifierMappingDst":0x700000035
+	}]}'
+fi
 
 # Remove stupid shortcuts... Beeps on code...
 mkdir -p ~/Library/KeyBindings
