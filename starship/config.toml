@@ -13,7 +13,7 @@ style = "bold yellow"
 
 [directory]
 truncation_length = 8
-truncation_symbol = "…/"
+truncation_symbol = "¯\\_(ツ)_/¯/"
 
 [custom.foo]
 command = "echo 🚀"
