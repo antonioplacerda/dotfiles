@@ -1,2 +1,4 @@
 git/gitconfig.local.symlink
 secret
+.idea
+DS_Store
