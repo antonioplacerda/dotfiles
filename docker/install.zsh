@@ -1,0 +1,2 @@
+curl 'https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/docker/_docker' > $ZSH/docker/plugins.zsh
+curl 'https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/docker-compose/docker-compose.plugin.zsh' >> $ZSH/docker/plugins.zsh
