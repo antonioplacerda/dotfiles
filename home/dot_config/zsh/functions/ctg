@@ -1,0 +1,4 @@
+#!/bin/zsh
+#
+# This lets you quickly jump into a go project directory.
+cd "$PROJECTS/toggleglobal/$1" && ls

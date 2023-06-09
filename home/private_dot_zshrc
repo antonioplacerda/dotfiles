@@ -1,0 +1,64 @@
+# shortcut to zsh config dir
+export ZSH=$HOME/.config/zsh
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/workspace
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# all of our zsh files
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
+
+# load the path file
+# Although there is only one path file for now,
+# if I ever want to go back to having the config
+# based on app instead of having all of them in
+# one place, at least this is already here.
+# for file in ${(M)config_files:#*/path.zsh}
+# do
+#   source $file
+# done
+source $ZSH/path.zsh
+
+# load everything but the path and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+do
+  source $file
+done
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# # load every completion after autocomplete loads
+# for file in ${(M)config_files:#*/completion.zsh}
+# do
+#   source $file
+# done
+source $ZSH/completion.zsh
+
+unset config_files
+
+# Better history
+# Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

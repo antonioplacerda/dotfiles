@@ -1,0 +1,4 @@
+#compdef ctg
+_files -W $PROJECTS/toggleglobal -/
+
+# See further documentation in `functions/ctg`.

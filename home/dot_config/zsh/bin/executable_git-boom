@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Delete all local branches that are not main or the current one:
+
+git branch -D `git branch | grep -v '^*' | grep -v 'main' | tr -d '\n'`

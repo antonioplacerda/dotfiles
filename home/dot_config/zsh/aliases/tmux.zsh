@@ -1,0 +1,6 @@
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+alias tnn='tmux new -s $(basename "$(pwd)")'
+alias tk='tmux kill-session -t'
+alias tks='tmux kill-server'
+alias tls='tmux ls'
