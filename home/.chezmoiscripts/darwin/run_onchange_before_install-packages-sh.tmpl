@@ -1,0 +1,48 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $brews := list
+     "bat"
+     "curl"
+     "evans"
+     "docker"
+     "fzf"
+     "gh"
+     "git"
+     "go"
+     "jq"
+     "kubernetes-cli"
+     "lua"
+     "neovim"
+     "postgresql"
+     "protobuf"
+     "python"
+     "qmk"
+     "ripgrep"
+     "tmux"
+     "wget"
+     "zsh"
+     "zsh-syntax-highlighting"
+     "zsh-history-substring-search"
+     "zsh-autosuggestions" -}}
+
+{{ $casks := list
+     "1password-cli"
+     "font-inconsolata-go-nerd-font"
+     "font-inconsolata-nerd-font"
+     "google-chrome"
+     "hammerspoon"
+     "slack"
+     "spotify"
+     "visual-studio-code"
+     "vlc" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
