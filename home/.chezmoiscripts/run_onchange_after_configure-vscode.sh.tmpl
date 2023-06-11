@@ -1,0 +1,21 @@
+{{ $extensions := list
+     "asvetliakov.vscode-neovim"
+     "bungcip.better-toml"
+     "golang.go"
+     "janisdd.vscode-edit-csv"
+     "mermade.openapi-lint"
+     "ms-ossdata.vscode-postgresql"
+     "PKief.material-icon-theme"
+     "redhat.vscode-yaml"
+     "sumneko.lua"
+     "vscodevim.vim"
+     "zxh404.vscode-proto3"
+     "yzhang.markdown-all-in-one" -}}
+
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ range $extensions -}}
+code --force --install-extension {{ . }}
+{{ end -}}
