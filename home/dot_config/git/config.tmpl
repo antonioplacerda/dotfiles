@@ -1,0 +1,72 @@
+[user]
+    name = {{ .name }}
+    email = {{ .email }}
+
+[advice]
+    addEmptyPathspec = false
+    pushNonFastForward = false
+    statusHints = false
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+
+[core]
+    editor = nvim
+    whitespace = trailing-space,space-before-tab
+
+[apply]
+    whitespace = nowarn
+
+[diff]
+    algorithm = histogram
+    renamelimit = 8192
+    renames = copies
+
+[fetch]
+    fsckobjects = false
+    prune = true
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[init]
+    defaultBranch = "master"
+
+[pager]
+    branch = false
+    grep = false
+
+[push]
+    default = current
+
+[rebase]
+    autosquash = true
+    autostash = true
+
+[receive]
+    fsckobjects = true
+
+[status]
+    submoduleSummary = true
+
+[transfer]
+    fsckobjects = true
+
+[credential]
+    helper = osxkeychain
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+{{/* vim: set filetype=gitconfig: */}}
