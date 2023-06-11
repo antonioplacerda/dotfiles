@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 hs.grid.setGrid('2x2') -- allows us to place on quarters, thirds and halves
 hs.window.animationDuration = 0 -- disable animations
 
@@ -10,11 +11,7 @@ local grid = {
   fullScreen = '0,0 2x2',
 }
 
---
--- Key bindings.
---
-
-function moveFrontmostWindow(where)
+local function moveFrontmostWindow(where)
   return function()
     local window = hs.window.frontmostWindow()
     local screen = window:screen()
@@ -22,10 +19,22 @@ function moveFrontmostWindow(where)
   end
 end
 
-function launchOrFocus(app)
+local function launchOrFocus(app)
   return function()
     hs.application.launchOrFocus(app)
   end
+end
+
+local function moveNextScreen()
+  local win = hs.window.focusedWindow()
+  local screen = win:screen()
+  win:move(win:frame():toUnitRect(screen:frame()), screen:next(), true, 0)
+end
+
+local function movePrevScreen()
+  local win = hs.window.focusedWindow()
+  local screen = win:screen()
+  win:move(win:frame():toUnitRect(screen:frame()), screen:previous(), true, 0)
 end
 
 local bindings = {
@@ -36,6 +45,11 @@ local bindings = {
     n = moveFrontmostWindow(grid.rightHalf),
 
     f = moveFrontmostWindow(grid.fullScreen),
+  },
+
+  [{'alt', 'cmd', 'shift'}] = {
+    n = moveNextScreen,
+    s = movePrevScreen,
   },
 
   [{'alt', 'cmd', 'ctrl', 'shift'}] = {
@@ -53,11 +67,9 @@ for modifier, keyActions in pairs(bindings) do
   end
 end
 
---
 -- Auto-reload config on change.
---
 
-function reloadConfig(files)
+local function reloadConfig(files)
   for _, file in pairs(files) do
     if file:sub(-4) == '.lua' then
       hs.reload()
