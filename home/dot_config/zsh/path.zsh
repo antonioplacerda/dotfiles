@@ -11,5 +11,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
+export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 export GOPRIVATE="bitbucket.org/toggleglobal/*,github.com/toggleglobal/*"
