@@ -22,3 +22,6 @@ alias rm='rm -r'
 alias rmrf='rm -rf'
 
 alias cp='cp -r'
+
+alias todos="ls -1 ~/Desktop/*.todo | tr -s '\n' '\n' |sed 's/.*\///; s/\.todo$//'"
+
