@@ -13,4 +13,4 @@ export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
-export GOPRIVATE="bitbucket.org/toggleglobal/*,github.com/toggleglobal/*"
+export GOPRIVATE="github.com/toggleglobal/*,github.com/rinuevents/*"
