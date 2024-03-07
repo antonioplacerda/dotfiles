@@ -57,7 +57,7 @@ local bindings = {
 		f = launchOrFocus("Finder"),
 		o = launchOrFocus("Obsidian"),
 		s = launchOrFocus("Slack"),
-		t = launchOrFocus("Kitty"),
+		t = launchOrFocus("WezTerm"),
 		y = launchOrFocus("System Preferences"),
 	},
 }
