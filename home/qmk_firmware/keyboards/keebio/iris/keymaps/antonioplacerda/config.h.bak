@@ -1,5 +1,6 @@
 #pragma once
 
+#define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 190
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
@@ -75,6 +76,3 @@
 #define GUI_C     LGUI(KC_C)
 #define GUI_V     LGUI(KC_V)
 #define GUI_X     LGUI(KC_X)
-
-#define GUI_LPRN  LGUI(KC_LPRN)
-#define GUI_RPRN  LGUI(KC_RPRN)

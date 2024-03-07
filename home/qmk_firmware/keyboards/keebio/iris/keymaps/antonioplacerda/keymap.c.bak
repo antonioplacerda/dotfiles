@@ -38,32 +38,32 @@ enum {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
-		KC_AT,		KC_EXLM,	GUI_C,		GUI_V,		KC_0,		KC_CIRC,							KC_DLR,		KC_AMPR,	KC_ASTR,	KC_EQL,		KC_HASH,	KC_BSPC,
-		KC_TAB,		KC_Q,		KC_H,		KC_O,		KC_U,		KC_MINS,							KC_G,		KC_C,		KC_M,		KC_R,		KC_V,		KC_SLSH,
-		KC_GRV,		MAIN_L1,	MAIN_L2,	MAIN_L3,	MAIN_L4,	KC_DOT,								KC_D,		MAIN_R1,	MAIN_R2,	MAIN_R3,	MAIN_R4,	KC_QUOT,
-		KC_BSLS,	BOTT_L1,	BOTT_L2,	BOTT_L3,	BOTT_L4,	TD(SLN),	THMB_L3,	THMB_R1,	KC_W,		BOTT_R1,	BOTT_R2,	BOTT_R3,	BOTT_R4,	KC_PERC,
-                                                              THMB_L1, THMB_L2, THMB_L3,	THMB_R1, THMB_R2, THMB_R3
+		KC_EXLM,	KC_AT,		GUI_C,		GUI_V,		KC_0,		KC_CIRC,							KC_DLR,		KC_AMPR,	KC_ASTR,	KC_EQL,		KC_HASH,	KC_BSPC,
+		KC_Q,		KC_H,		KC_O,		KC_U,		KC_MINS,	KC_TAB,								KC_SLSH,	KC_G,		KC_C,		KC_M,		KC_R,		KC_V,
+		MAIN_L1,	MAIN_L2,	MAIN_L3,	MAIN_L4,	KC_DOT,		KC_GRV,								KC_QUOT,	KC_D,		MAIN_R1,	MAIN_R2,	MAIN_R3,	MAIN_R4,
+		BOTT_L1,	BOTT_L2,	BOTT_L3,	BOTT_L4,	TD(SLN),	KC_BSLS,	THMB_L3,	THMB_R1,	KC_PERC,	KC_W,		BOTT_R1,	BOTT_R2,	BOTT_R3,	BOTT_R4,
+                                                                KC_ESC, THMB_L2, THMB_L3,	THMB_R1, THMB_R2, KC_BSPC
 		),
 	[1] = LAYOUT(
-		___T___,	___X___,	___X___,	KC_MUTE,	___X___,	___X___,							___X___,	___X___,	GUI_UP,		___X___,	___X___,	___T___,
-		___T___,	KC_MUTE,	KC_VOLD,	KC_UP,		KC_VOLU,	TD(CBR),							___X___,	ALT_LFT,	KC_UP,		ALT_RGT,	___X___,	___T___,
-		___T___,	___X___,	KC_LEFT,	KC_DOWN,	KC_RIGHT,	TD(PRN),							GUI_LFT,	KC_LEFT,	KC_DOWN,	KC_RGHT,	GUI_RGT,	___T___,
-		___T___,	NAV_L1,		NAV_L2,		NAV_L3,		NAV_L4,		TD(BRC),	___T___,	___X___,	___X___,	CTL_LFT,	GUI_DWN,	CTL_RGT,	___X___,	___T___,
-		                                                      ___X___, ___X___, ___T___,	___X___, ___T___, ___T___
+		___X___,	KC_MUTE,	GUI_LPRN,	GUI_RPRN,	___X___,	___T___,							___T___,	___X___,	___X___,	GUI_UP,		___X___,	___X___,
+		___X___,	KC_VOLD,	KC_UP,		KC_VOLU,	TD(CBR),	KC_RCBR,							___T___,	___X___,	ALT_LFT,	KC_UP,		ALT_RGT,	___X___,
+		___X___,	KC_LEFT,	KC_DOWN,	KC_RIGHT,	TD(PRN),	KC_RPRN,							___T___,	GUI_LFT,	KC_LEFT,	KC_DOWN,	KC_RGHT,	GUI_RGT,
+		NAV_L1,		NAV_L2,		NAV_L3,		NAV_L4,		TD(BRC),	KC_RBRC,	___X___,	___X___,	___T___,	___X___,	CTL_LFT,	GUI_DWN,	CTL_RGT,	___X___,
+		                                                      ___X___, ___T___, ___X___,	___X___, ___T___, ___T___
 		),
 	[2] = LAYOUT(
-		___T___,	___X___,	___X___,	LSFT_F8,	___X___,	___X___,							___X___,	___X___,	___X___,	___X___,	___X___,	___T___,
-		___T___,	KC_F10,		KC_F7,		KC_F8,		KC_F9,		___X___,							KC_PLUS,	KC_7,		KC_8,		KC_9,		___X___,	___T___,
-		___T___,	KC_F11,		KC_F4,		KC_F5,		KC_F6,		___X___,							KC_MINS,	KC_4,		KC_5,		KC_6,		___X___,	___T___,
-		___T___,	FNNUM_L1,	FNNUM_L2,	FNNUM_L3,	FNNUM_L4,	___X___,	___X___,	___T___,	KC_EQL,		FNNUM_R1,	FNNUM_R2,	FNNUM_R3,	FNNUM_R4,	___T___,
+		___X___,	___X___,	LSFT_F8,	___X___,	___X___,	___T___,							___T___,	___X___,	___X___,	___X___,	___X___,	___X___,
+		KC_F10,		KC_F7,		KC_F8,		KC_F9,		___X___,	___T___,							___T___,	KC_PLUS,	KC_7,		KC_8,		KC_9,		___X___,
+		KC_F11,		KC_F4,		KC_F5,		KC_F6,		___X___,	___T___,							___T___,	KC_MINS,	KC_4,		KC_5,		KC_6,		___X___,
+		FNNUM_L1,	FNNUM_L2,	FNNUM_L3,	FNNUM_L4,	___X___,	___T___,	___X___,	___T___,	___T___,	KC_EQL,		FNNUM_R1,	FNNUM_R2,	FNNUM_R3,	FNNUM_R4,
 		                                                      ___X___, ___X___, ___X___,	___T___, KC_0, KC_DOT
 		),
 	[3] = LAYOUT(
-		___T___,	___T___,	___T___,	___T___,	___T___,	___T___,							___X___,	___X___,	___X___,	___X___,	___X___,	___T___,
-		___T___,	___X___,	KC_7,		KC_8,		KC_9,		___X___,							___X___,	___X___,	___X___,	___X___,	___X___,	___T___,
-		___T___,	___X___,	KC_4,		KC_5,		KC_6,		___X___,							___X___,	___X___,	___X___,	___X___,	___X___,	___T___,
-		___T___,	___X___,	KC_1,		KC_2,		KC_3,		___X___,	___X___,	___X___,	___X___,	KC_RGUI,	KC_RSFT,	KC_LALT,	KC_LCTL,	___T___,
-		                                                      ___X___, ___T___, ___X___,	___X___, ___X___, ___X___
+		___T___,	___T___,	___T___,	___T___,	___T___,	___T___,							___T___,	___X___,	___X___,	___X___,	___X___,	___X___,
+		___X___,	KC_7,		KC_8,		KC_9,		___X___,	___T___,							___T___,	___X___,	___X___,	___X___,	___X___,	___X___,
+		___X___,	KC_4,		KC_5,		KC_6,		___X___,	___T___,							___T___,	___X___,	___X___,	___X___,	___X___,	___X___,
+		___X___,	KC_1,		KC_2,		KC_3,		___X___,	___T___,	___T___,	___X___,	___T___,	___X___,	KC_RGUI,	KC_RSFT,	KC_LALT,	KC_LCTL,
+		                                                      ___X___, ___X___, ___T___,	___X___, ___X___, ___X___
 		)
 };
 
@@ -223,7 +223,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     td_state = 0;
 // }
 
-tap_dance_action_t tap_dance_actions[] = {
+qk_tap_dance_action_t tap_dance_actions[] = {
     [SLN] = ACTION_TAP_DANCE_DOUBLE(KC_COLN, KC_SCLN),
     [CBR] = ACTION_TAP_DANCE_DOUBLE(KC_LCBR, KC_RCBR),
     [PRN] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
