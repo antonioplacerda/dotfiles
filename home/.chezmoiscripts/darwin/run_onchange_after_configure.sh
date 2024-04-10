@@ -133,9 +133,9 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Remove stupid shortcuts...
 mkdir -p ~/Library/KeyBindings
 echo '{
-  "^@\UF701" = "noop";
-  "^@\UF702" = "noop";
-  "^@\UF703" = "noop";
+  "^@\UF701" = "noop:";
+  "^@\UF702" = "noop:";
+  "^@\UF703" = "noop:";
 }' > ~/Library/KeyBindings/DefaultKeyBinding.dict
 
 # Disable Notification Center and remove the menu bar icon
