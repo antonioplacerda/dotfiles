@@ -13,7 +13,6 @@ return require('packer').startup(function(use)
 
 	use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 
-	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 	use('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
