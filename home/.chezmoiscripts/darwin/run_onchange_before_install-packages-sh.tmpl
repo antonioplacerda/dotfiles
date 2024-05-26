@@ -55,8 +55,6 @@ set -eufo pipefail
      "visual-studio-code"
      "vlc" -}}
 
-brew tap homebrew/cask-fonts
-
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
 brew "{{ . }}"
