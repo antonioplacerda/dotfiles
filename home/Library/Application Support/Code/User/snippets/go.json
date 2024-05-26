@@ -1,0 +1,184 @@
+{
+	"Goroutine anonymous func": {
+		"prefix": "gofunc",
+		"body": [
+			"go func(){",
+			"  $0",
+			"}()"
+		]
+	},
+	"Defer anonymous func": {
+		"prefix": "defunc",
+		"body": [
+			"defer func() {",
+			"  $0",
+			"}()"
+		]
+	},
+	"append": {
+		"prefix": "ap",
+		"body": [
+			"${1:slice} = append(${1:slice}, ${0:element})"
+		]
+	},
+	"fmt.Sprintf": {
+		"prefix": "fms",
+		"body": [
+			"fmt.Sprintf(\"${1:%+v}\", $0)"
+		]
+	},
+	"fmt.Errorf": {
+		"prefix": "fme",
+		"body": [
+			"fmt.Errorf(\"${1:%+v}\", ${0:err})"
+		]
+	},
+	"if ok": {
+		"prefix": "ifok",
+		"body": [
+			"if ${1:value}, ok := $2; ok {",
+			"  $0",
+			"}"
+		]
+	},
+	"if error": {
+		"prefix": "ifer",
+		"body": [
+			"if err != nil {",
+			"  $0",
+			"}"
+		]
+	},
+	"errors.Is()": {
+		"prefix": "eis",
+		"body": [
+			"if errors.Is(err, ${1:exec.ErrNotFound}) {",
+			"  $0",
+			"}"
+		]
+	},
+	"errors.As()": {
+		"prefix": "eas",
+		"body": [
+			"var e ${1:*exec.Error}",
+			"if errors.As(err, &e) {",
+			"  $0",
+			"}"
+		]
+	},
+	"Return Nil": {
+		"prefix": "rn",
+		"body": [
+			"return nil"
+		]
+	},
+	"Return Nil & err": {
+		"prefix": "rne",
+		"body": [
+			"return nil, err"
+		]
+	},
+	"Return err": {
+		"prefix": "re",
+		"body": [
+			"return err"
+		]
+	},
+	"sync.Mutex Lock and defer Unlock": {
+		"prefix": "lock",
+		"body": [
+			"${1:mu}.Lock()",
+			"defer ${1:mu}.Unlock()"
+		]
+	},
+	"New Constructor Method": {
+		"prefix": "ne",
+		"body": [
+			"func New$1($2) *$1 {",
+			"  $3",
+			"  return &$1{",
+			"    $0",
+			"  }",
+			"}"
+		]
+	},
+	"For Range": {
+		"prefix": "fr",
+		"body": [
+			"for _, ${1:v} := range ${2:values} {",
+			"  $0",
+			"}"
+		]
+	},
+	"For Range with i": {
+		"prefix": "fri",
+		"body": [
+			"for i, ${1:v} := range ${2:values} {",
+			"  $0",
+			"}"
+		]
+	},
+	"For Range Chan": {
+		"prefix": "frc",
+		"body": [
+			"for ${1:v} := range ${2:channel} {",
+			"  $0",
+			"}"
+		]
+	},
+	"Quicktest Assert Nil": {
+		"prefix": "qtnil",
+		"body": [
+			"c.Assert(${1:actual}, qt.IsNil)",
+			"$0"
+		]
+	},
+	"Quicktest Assert Not Nil": {
+		"prefix": "qtnnil",
+		"body": [
+			"c.Assert(${1:actual}, qt.IsNotNil)",
+			"$0"
+		]
+	},
+	"Quicktest Assert Equal": {
+		"prefix": "qteq",
+		"body": [
+			"c.Assert(${1:actual}, qt.Equal, ${2:expected})",
+			"$0"
+		]
+	},
+	"Quicktest Assert Deep Equals": {
+		"prefix": "qtdeq",
+		"body": [
+			"c.Assert(${1:actual}, qt.DeepEqual, ${2:expected})",
+			"$0"
+		]
+	},
+	"Quicktest Assert Error matches": {
+		"prefix": "qterr",
+		"body": [
+			"c.Assert(err, qt.ErrorMatches, `${2:expected}`)",
+			"$0"
+		]
+	},
+	"Quicktest import": {
+		"description": "import quicktest",
+		"prefix": "iqt",
+		"body": [
+			"import qt \"github.com/frankban/quicktest\"",
+			"$0"
+		]
+	},
+	"New test with defaults": {
+		"prefix": "ctest",
+		"body": [
+			"import qt \"github.com/frankban/quicktest\"",
+			"",
+			"func Test${1:TestCase}(t *testing.T) {",
+			"c := qt.New(t)",
+			"c.Run(\"\", func(c *qt.C){",
+			"})",
+			"}",
+		]
+	}
+}

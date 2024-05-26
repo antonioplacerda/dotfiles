@@ -1,0 +1,44 @@
+{
+    "redhat.telemetry.enabled": false,
+    "git.confirmSync": false,
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "editor.quickSuggestionsDelay": 1000,
+    "editor.scrollBeyondLastLine": false,
+    "editor.fontFamily": "InconsolataGoNerd, Consolas, Inconsolata, Menlo, monospace",
+    "editor.fontSize": 14,
+    "testing.automaticallyOpenPeekView": "never",
+    "go.showWelcome": false,
+    "go.buildTags": "wireinject",
+    "go.formatFlags": [
+        "-local",
+        "local",
+        "\"-local\""
+    ],
+    "go.formatTool": "gofumpt",
+    "workbench.colorTheme": "Darcula Theme from IntelliJ",
+    "files.autoSave": "onFocusChange",
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "underline",
+    "editor.insertSpaces": false,
+    "files.exclude": {
+        "**/.idea": true
+    },
+    "editor.accessibilitySupport": "off",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.screenReaderAnnounceInlineSuggestion": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "breadcrumbs.icons": false,
+    "accessibility.hideAccessibleView": true,
+    "explorer.compactFolders": false,
+    "explorer.fileNesting.patterns": {
+        "go.mod": "go.mod, go.sum"
+    },
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.closeReadonlyTabsOnEnd": true,
+    "telemetry.telemetryLevel": "off",
+}
