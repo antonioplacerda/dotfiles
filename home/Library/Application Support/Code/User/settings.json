@@ -20,7 +20,6 @@
     "workbench.colorTheme": "Darcula Theme from IntelliJ",
     "files.autoSave": "onFocusChange",
     "editor.renderWhitespace": "all",
-    "editor.cursorStyle": "underline",
     "editor.insertSpaces": false,
     "files.exclude": {
         "**/.idea": true
@@ -41,4 +40,5 @@
     "debug.allowBreakpointsEverywhere": true,
     "debug.closeReadonlyTabsOnEnd": true,
     "telemetry.telemetryLevel": "off",
+    "explorer.sortOrderLexicographicOptions": "unicode",
 }
