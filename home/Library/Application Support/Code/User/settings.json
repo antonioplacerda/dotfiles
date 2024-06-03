@@ -41,4 +41,5 @@
     "debug.closeReadonlyTabsOnEnd": true,
     "telemetry.telemetryLevel": "off",
     "explorer.sortOrderLexicographicOptions": "unicode",
+    "git.suggestSmartCommit": false,
 }
