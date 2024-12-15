@@ -1,0 +1,45 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "autosave": "on_focus_change",
+  "vim_mode": false,
+  "telemetry": {
+    "metrics": false
+  },
+  "buffer_font_family": "InconsolataGo Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "cursor_shape": "underline",
+  "project_panel": {
+    "dock": "right"
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark"
+  },
+  "journal": { "hour_format": "hour24" },
+  "languages": {
+    "Go": {
+      "hard_tabs": true,
+      "show_whitespaces": "all"
+    }
+  },
+  "file_types": {
+    "yaml": [".tg", ".secrets"],
+    "Dockerfile": ["Dockerfile*"]
+  }
+}

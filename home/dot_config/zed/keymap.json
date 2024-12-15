@@ -1,0 +1,42 @@
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-\\": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-backspace": "editor::DeleteLine",
+      "cmd-\\": "terminal_panel::ToggleFocus",
+      // Add selection to Next Find Match
+      "ctrl-g": ["editor::SelectNext", { "replace_newest": false }],
+      // Select all occurrences of current selection
+      "ctrl-shift-g": "editor::SelectAllMatches",
+      // Add cursor to line ends
+      "cmd-shift-g": "editor::SplitSelectionIntoLines",
+      "cmd-u": "editor::ConvertToLowerCase",
+      "cmd-shift-u": "editor::ConvertToUpperCase",
+      "cmd-e": "branches::OpenRecent",
+      "cmd--": "editor::Fold",
+      "cmd-_": "editor::UnfoldLines",
+      "cmd-ctrl-p": "workspace::ActivateNextPane",
+      "cmd-shift-ctrl-p": "workspace::ActivatePreviousPane",
+      "alt-cmd-left": "pane::ActivatePrevItem",
+      "alt-cmd-right": "pane::ActivateNextItem",
+      "cmd-ctrl-right": "pane::SplitRight",
+      "alt-enter": "editor::ToggleCodeActions",
+      "ctrl-t": "editor::Rename"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // "cmd-shift-o": "project_panel::OpenPermanent",
+      "cmd-shift-o": "project_panel::RevealInFileManager"
+    }
+  }
+]
