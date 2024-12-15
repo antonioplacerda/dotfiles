@@ -7,4 +7,4 @@ fi
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
 # Key bindings
-source "/opt/homebrew/Cellar/fzf/0.52.1/shell/key-bindings.zsh"
+source "/opt/homebrew/Cellar/fzf/0.56.3/shell/key-bindings.zsh"
