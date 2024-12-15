@@ -56,6 +56,7 @@ local bindings = {
 		c = launchOrFocus("Google Chrome"),
 		f = launchOrFocus("Finder"),
 		m = launchOrFocus("Obsidian"),
+		n = launchOrFocus("Notes"),
 		o = launchOrFocus("Obsidian"),
 		p = launchOrFocus("Spotify"),
 		s = launchOrFocus("Slack"),
